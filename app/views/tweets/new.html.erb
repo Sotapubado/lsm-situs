@@ -1,0 +1,15 @@
+<h1>Lapangan Sambang-Menyambung</h1>
+<h3>Tweet Baru</h3>
+<%= stylesheet_link_tag 'new', :media => "all" %>
+
+<div class="post-container">
+    <p class="title">Bentuk Pembukuan</p>
+    <%= form_for(@tweet, :url => { controller:'tweets', action:'create'})do |f| %>
+    <%= f.label :IsiPembukuan %>
+        <br>
+        <%= f.text_field :body,size: 140%>
+        <br>
+    <%= f.submit "Mengirim"%>
+    <br>
+    <% end %>
+</div>
