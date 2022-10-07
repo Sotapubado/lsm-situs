@@ -2,51 +2,131 @@
     padding: 0;
     margin: 0;
   }
-  body {
 
-    min-height: 100vh;
-    position: relative; 
-    font-family: serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  header{
+    position: fixed;
+  }
+
+  #header-margin{
+    height: 75px;
+  }
+
+  #title-img{
+    width:60px;
+    height:60px;
+
+    margin:5px;
+
+    max-width:100%;
+    max-height:100%;
+
+    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
     
+    background-image: url("lsm-title2.png");
+    background-size: cover;
+    background-position: 0 -3.5px;
   }
 
  #lsm-title{
 
-    padding-left: 29%;
-    background-color: rgb(252, 192, 82);
+ 
+   font-weight: bolder;
+   font-size: 0.8rem;
+   padding-top: 0.5%;
+   padding-left: 3%;
+
+   display: inline;
+  
+  }
+
+  #lsm-header {
+    
+    display: flex;
+
+    padding-left: 5%;
+    padding-top: 2px;
+  
+    height: auto;
+    width: 100%;
+
+    background-color: white;
+    opacity: 0.9;
+
+  }
+
+  #list-all{
+    display: flex;
+    margin: 0 8em 0 auto;
+  }
+
+  .link-list {
+    
+    color: rgb(255, 175, 25);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+    background: -webkit-linear-gradient(180deg,rgb(255, 166, 0),
+    rgb(255, 248, 235),
+    rgb(255, 239, 209),
+    rgb(255, 244, 224));
+    background: -webkit-linear-gradient(right, rgb(255, 162, 0),
+    rgb(255, 248, 235),
+    rgb(255, 239, 209),
+    rgb(255, 244, 224));
+    background: linear-gradient(270deg,
+    rgb(255, 243, 220),
+    rgb(255, 244, 225),
+    rgb(255, 248, 235),
+    #fff0da);
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+
+}
+
+/* マウスオーバー時 */
+.link-list:hover {
+    background-position: 99% 50%;
+    color: #feffce;
+   
+    cursor: pointer;
+}
+
+
+  .list{
+    display: inline-block;
+    padding: 0.8em 2.2em 0.8em 2.2em;
+    text-align:center;
+   
+  }
+  .list-mozi{
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration-line: none;
+    padding-top: 5px;
+   
+  }
+
+  .link-list{
+    text-decoration: none;
+
+  }
+
+
+
+  body {
+
+    min-height: 100vh;
+    position: relative; 
+    font-family: 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(255, 247, 231);
     
   }
 
-  header {
-    
-    height: 80px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header a {
-    color: white; 
-    text-decoration: none; 
-  }
-  header h1 {
-    margin-left: 20px;
-    color: white;
-  }
-  .header-list {
-    display: flex;
-    align-items: center;
-  }
-  header ul {
-    display: flex; 
-  }
-  header li {
-    list-style: none;
-    margin-right: 40px;
-  }
   footer {
     color: white;
     height: 30px;
@@ -57,4 +137,8 @@
     align-items: center;
     position: fixed;
     justify-content: flex-end;
+  }
+
+  #footer-margin{
+    height: 75px;
   }

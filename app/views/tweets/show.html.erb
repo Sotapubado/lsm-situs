@@ -1,8 +1,12 @@
 <h1>GeekTwitter</h1>
 <h3>Tweet詳細</h3>
 <div class="tweet">
-  <p><%= @tweet.body %></p>
-  <p><%= @tweet.created_at %></p>
+  
+  <% @user.tweets.each do |t| %>
+        <%= t.user.name %>
+        <%= t.body %>
+  <% end %>
+    
 </div>
 
 <%= link_to "Tweet一覧に戻る", tweets_path %>

@@ -1,9 +1,19 @@
-<h1>Lapangan Sambang-Menyambung</h1>
-<h3>Tweet Baru</h3>
 <%= stylesheet_link_tag 'new', :media => "all" %>
 
+
+<div id="new-message">
+
+    <h3>Dengan Siapa Kamu Mau Berteman? Tolong Menjelaskan Kebutuhanmu</h3>
+    <h5>| Chonth |</h5>
+    <h5>・Saya ingin saling mengikuti dengan siapa pun</h5>
+    <h5>・Bagus untuk orang-orang dengan minat yang sama dengan saya</h5>
+
+</div>
+
 <div class="post-container">
-    <p class="title">Bentuk Pembukuan</p>
+
+        <%= notice %>
+
     <%= form_for(@tweet, :url => { controller:'tweets', action:'create'})do |f| %>
     <%= f.label :IsiPembukuan %>
         <br>
@@ -12,4 +22,5 @@
     <%= f.submit "Mengirim"%>
     <br>
     <% end %>
+
 </div>

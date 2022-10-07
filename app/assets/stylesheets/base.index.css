@@ -1,45 +1,101 @@
-.log {
+#base-index-all{
+  display: flex;
+}
+
+.base-index-overall {
     width: 100%;
-    height: 200px;
-    padding-top: 100px;
-    padding-bottom: 30px;
+    height: auto;
+
+    display: block;
+
+  }
+
+#bi-intro-box{
+  padding: 20px 40px 40px 40px;
+  margin: 3em 3em 3em 5em;
+  font-size: 1.2em;
+  color: #383838;
+ 
+  border-radius: 30px;
+  background-image:  url("yellow4.jpg" );
+  width: fit-content;
+
+  line-height: 3em;
+}
+#bi-intro-box h5{
+  line-height: 1.6em;
+}
+.insta{
+  letter-spacing: 0.1em;
+  color: black;
+  font-family: impact, fantasy;
+  font-size: 1.25em;
+}
+
+#lo12{
     display: flex;
+
     text-align: center;
     justify-content:center;
-   
-  
-  }
+
+}
+#log-box{
+    width: 30em;
+
+    margin: 3.5em 3.5em 3.5em 7em;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    border-radius: 30px;
+    background-color: rgb(255, 218, 98);
+
+    
+}
   .circle{
-    color: rgb(3, 3, 3);
+   
     text-decoration: none;
-    font-size: 150%;
+    font-size: 130%;
+    
     font-family: 'Arial Narrow Bold', sans-serif;
-  
-  
-    text-shadow: 1px 1px 1px #808080;
+    
+    line-height:0.95em;
+    font-weight:900;
+    color: rgb(255, 255, 255); 
+
   }
-  
-  
+
+
   .lo1,
-  .lo2 {
-  
-    text-decoration: none;
-    color: black;
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
-    border-radius: 50%;
-    border: double 4px black;
-  
-    overflow: hidden;
-    transition: 0.6s;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  .lo2{
+    padding: 30px;
+    border: solid 3px;
+    border-radius: 10px;
+    border-color: white;
+    
   }
-  .lo2box,.lo1box{
-    padding: 15px;
-  }
-  
+.lo1{
+  margin-right: 20px ;
+}
+.lo2{
+  margin-left: 30px ;
+}
+
+.ex-lo2{
+  padding: 20px 0px 0px 260px;
+  font-size: 16px;
+  font-family: Arial Narrow Bold', 'serif';
+}
+
+.insta-img{
+
+  background-image: url("instagram.avif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: 1000px;
+
+  overflow: hidden;
+  border-radius: 30px;
+
+  margin: 10em 8em 3em 0em;
+}

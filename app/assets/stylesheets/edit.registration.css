@@ -1,0 +1,39 @@
+.edit-registration-all{
+    margin: 2em;
+    font-weight: bold;
+}
+h2{
+    background-color: rgb(255, 218, 98);
+    border-radius: 10px;
+
+    width: fit-content;
+    padding: 0.5em;
+}
+
+.field{
+    margin: 1.5em;
+    background-color: rgb(255, 236, 173);
+    border-radius: 10px;
+
+    width: fit-content;
+    padding: 1em;
+}
+
+.action{
+    margin: 1em;
+}
+
+#log-out{
+    padding-left: 3em;
+}
+
+#account-cancel{
+    margin: 2em;
+    
+    background-color: rgb(255, 231, 151);
+    border-radius: 10px;
+
+    width: fit-content;
+    padding: 1em;
+
+}

@@ -1,24 +1,35 @@
 
 <%= stylesheet_link_tag 'index', :media => "all" %>
 
-<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
-<% if user_signed_in? %>
-<%= link_to "マイページへ", user_path(current_user.id) %>　
-<% end %>
 
 <div class="tweets-container">
-<h3>Repertorium Tweet</h3>
-  <% @tweets.each do |t| %>
-    <div class="tweet">
-      <div class="main-box">
-        <div class="left-container"><%= t.body %></div>
-        <div class="right-container">
-          <%= t.user.email %>
-          <%= link_to "Detail", tweet_path(t.id) %>
-          <%= link_to "Delasi", tweet_path(t.id), method: :delete %>
+  <h3>Lapangan Akun Instagram</h3>
+
+      <%= notice %>
+    <% @tweets.each do |t| %>
+      <div class="tweet">
+        <div class="main-box">
+          <div class="right-container">
+
+            <div id="r-c-image">
+             <%= image_tag t.user.image.url if t.user.image? %>
+            </div>
+
+            <div class="r-c-part" id="r-c-igid">
+              <div class="r-c-message">Instagram ID</div>
+              <%= t.user.igid %>
+            </div>
+            <div class="r-c-part" id="r-c-name">
+              <div class="r-c-message" id="rcm">User Name</div>
+              <%= t.user.name %>
+            </div>
+            <div class="r-c-part" id="r-c-body">
+              <div class="r-c-message" id="rcm2">Dengan Siapa Mau Berteman</div>
+              <%= t.body %>
+            </div>
+          
+          </div>
         </div>
       </div>
-        <p class="time"><%= t.created_at %></p>
-    </div>
-  <% end %>
+    <% end %>
 </div>

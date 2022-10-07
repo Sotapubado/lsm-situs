@@ -72,3 +72,15 @@ group :test do
 end
 
 gem 'devise'
+
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+
+gem 'jquery-rails'
+
+gem 'webpacker'
+
+gem 'mini_magick'
+
+gem 'cloudinary'
+
+gem 'dotenv-rails'

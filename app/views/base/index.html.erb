@@ -1,14 +1,35 @@
    <%= stylesheet_link_tag 'base.index', :media => "all" %>
+
+   <div id="base-index-all" >
    
-    <div class="log">
-        <div class="lo1box">
-          <div class="lo1">
-            <%= link_to "Log in", tweets_path, class: "circle" %>
-          </div> 
+      <div class="base-index-overall">
+
+        <div id="bi-intro-box">
+          <h3>Mau berkembang pengiku <span class="insta">Instagram</span>?</h3>
+          <h5>Mari kita temukan seseorang yang mau ikuti saling</h5>
+          <h5>Bisa cari seseorang yang memiliki hobi sama dengan Anda</h5>
         </div>
-        <div class="lo2box">
-          <div class="lo2">
-            <%= link_to "Sign in", new_user_registration_path, class: "circle" %>
+
+        <div id="log-box">
+          <div id="lo12">
+            <div class="lo1box">
+              <div class="lo1">
+                <%= link_to "Log in", tweets_path, class: "circle" %>
+              </div> 
+            </div>
+            <div class="lo2box">
+              <div class="lo2">
+                <%= link_to "Sign in", new_user_registration_path, class: "circle" %>
+              </div>
+            </div>
           </div>
+          
+          <div class="ex-lo2"><h5>Belum punya akun LSM?</h5></div>
+            
         </div>
-    </div>
+
+      </div>
+
+       <div class="insta-img"></div>
+
+  

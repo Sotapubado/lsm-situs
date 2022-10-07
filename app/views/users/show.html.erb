@@ -1,17 +1,74 @@
-<h1>users#show</h1>
-<p>名前 : <%= @user.name %></p>
-<p>メールアドレス : <%= @user.email %></p>
-<p>プロフィール : <%= @user.profile %></p>
+<%= stylesheet_link_tag 'mypageshow', :media => "all" %>
 
-<% if current_user.id == @user.id %>
-  <%= link_to "編集する", edit_user_registration_path %>
-<% end %>
+<div id="p-overall">
 
-<h2>ユーザーの投稿一覧</h2>
-<% @user.tweets.each do |t| %>
-  <%= t.user.name %>
-  <%= t.body %>
-<% end %>
+    <div id="p-title-message">
+
+        <div id="p-message">
+          <h3>Perhatian untuk pakai Lapangen Win-Win</h3>
+          <h5>・Ayo pasti saling sambung-menyambung. ~ Jangan hanya membuat pengikut, ikutimu secara bersamaan ~ </h5>
+          <h5>・Mari kita mendapatkan pengaruh dan menjadi Win-Win bareng. </h5>
+        </div>
+
+    </div>
 
 
-<%= link_to "Tweet一覧に戻る", tweets_path %>
+    <div class="p-ikon-info">
+
+        <div id="p-title-ikon">
+            <h2 id="p-title">Your Profile</h2>
+            <div id="p-ikon">
+              <% if @user.image? %>
+                <%= image_tag @user.image.url if @user.image? %>
+              <% else %>
+                <%= image_tag ("instagram.lsm.jpg") %>
+              <% end %>
+             
+            
+            </div>
+        </div>
+
+        <div id="p-info-all">
+
+            <div id="p-info">
+
+              <p class="p-info-class" id="p-nama">
+                <h4>: Nama Lengkap :</h4> <span class="p-span"><%= @user.name %></span>
+              </p>
+              <p class="p-info-class" id="p-email">
+                <h4>: Alamat E-mail : <span id="e-span">*tidak diterbitkan</span></h4> <span class="p-span"><%= @user.email %></span>
+              </p>
+              <p class="p-info-class" id="p-igid">
+                <h4>: Instagram Nama Pengguna :</h4> <span class="p-span"><%= @user.igid %></span>
+              </p>
+              <p class="p-info-class" id="p-purpose">
+                <h4>: Apa Hobimu? Pamerkan Individualitasmu :</h4> <span class="p-span"><%= @user.profile %></span>
+              </p>
+
+            </div>
+
+            <div id="p-info-edit">
+              <% if current_user.id == @user.id %>
+                <%= link_to "Edit Prifile", edit_user_registration_path, {class: "edit-class"} %>
+              <% end %>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="p-daftar-tweet">
+
+      <h2>Tweermu</h2>
+      <div class="tweet-all">
+            
+            <% @user.tweets.each do |t| %>
+              <%= t.body %>
+              <%= button_to "Delasi", tweet_path(t.id), method: :delete %>
+            <% end %>
+      </div>
+    
+    </div>
+
+</div>
+

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'tweets/:id' => 'tweets#show',as: 'tweet'
   delete 'tweets/:id' => 'tweets#destroy'
+  
   root 'base#index'
 
 

@@ -1,24 +1,47 @@
+#new-message{
+    margin: 50px auto;
+    padding: 2em;
+    background-image: url("yellow4.jpg");
+    border-radius: 10px;
+    width: fit-content;
+}
+#new-message h3{
+    padding-bottom: 1em;
+}
+#new-message h5{
+  line-height: 2.3;
+  font-size: 15px;
+}
+
 .post-container {
     margin: 50px auto;
     width: 50%;
-    border: solid #d3def1;
+    border: solid 5px rgb(0, 0, 0);
     border-radius: 10px;
     text-align: center;
-    background-color: #d3def1;
+    background-color: rgb(255, 218, 98);
   }
   .title {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 50px;
+
+    
   }
   input[type="text"] {
+    font-weight: bold;
+    font-size: 22px;
     width: 95%;
-    height: 40px;
+    height: 50px;
+    margin: 1.2em 1em 0em 1em;
   }
   input[type="submit"] {
     width: 200px;
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 50px;
     margin-bottom: 30px;
+    padding: 5px;
+
+    background-color: white;
   }
   

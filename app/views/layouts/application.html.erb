@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lapangan Sambang-Menyambung</title>
+    <title>Lapangan Win-Win</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://kit.fontawesome.com/bb551b0342.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>  
+
+    </script>
+
     
   </head>
+
   <body>
-    <header>
-      <h1 id="lsm-title">Lapangan Sambang-Menyambung</h1>
-      <div class="header-list">
-          
+    <header id ="lsm-header">
+
+      <div id="title-img"></div>
+
+      <div id="lsm-title">
+        <h1 >Lapangan Win-Win</h1>
+        <h5>Tingkatkan pengikut Instagram Anda!</h5>
       </div>
+
+      <div id="list-all">
+          <% if user_signed_in? %>
+            <div class="list">
+              <%= link_to  tweets_path, {class: "link-list"} do %>
+                <i class="fa-solid fa-list fa-2x"></i>
+                <div class="list-mozi">Dafter IGID</div>
+              <% end %>
+            </div>
+            <div class="list">
+              <%= link_to  tweets_new_path, {class: "link-list"} do %>
+                <i class="fa-solid fa-paper-plane fa-2x"></i>
+                <div class="list-mozi">New Post</div>
+              <% end %>
+            </div>
+            <div class="list">
+              <%= link_to  user_path(current_user.id), {class: "link-list"} do %>
+                <i class="fa-solid fa-user fa-2x"></i>
+                <div class="list-mozi">Proflile</div>
+              <% end %>
+            </div>
+         
+          <% end %>
+      </div>
+
     </header>
+
+     <div id="header-margin"></div>
+
     <main>
       <%= yield %>
     </main>
+
+    <div id="footer-margin"></div>
+
     <footer>
      <p>Copyright © Sota Tomiuchi All Rights Reserved.</p>
     </footer>
